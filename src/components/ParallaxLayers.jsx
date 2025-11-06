@@ -5,7 +5,7 @@ const ParallaxLayers = () => {
   const ref = useRef(null);
   const { scrollYProgress } = useScroll({ target: ref, offset: ['start end', 'end start'] });
 
-  const bgY = useTransform(scrollYProgress, [0, 1], ['0%', '20%']);
+  const bgY = useTransform(scrollYProgress, [0, 1], ['0%', '25%']);
   const midY = useTransform(scrollYProgress, [0, 1], ['0%', '-10%']);
   const fgY = useTransform(scrollYProgress, [0, 1], ['0%', '-20%']);
   const opacity = useTransform(scrollYProgress, [0, 1], [0.7, 1]);

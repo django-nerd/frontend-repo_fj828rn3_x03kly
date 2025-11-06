@@ -57,13 +57,13 @@ function App() {
 
   return (
     <main className="min-h-screen w-full bg-[#2C2C2C] text-white">
-      {/* Hero with subtle parallax */}
+      {/* Hero with interactive Spline cover and parallax text */}
       <Hero />
 
       {/* Decorative parallax layer composition */}
       <ParallaxLayers />
 
-      {/* Destination sections with scroll-reveal and scale */}
+      {/* Destination sections with scroll-reveal and internal image parallax */}
       {destinations.map((d) => (
         <DestinationSection
           key={d.title}

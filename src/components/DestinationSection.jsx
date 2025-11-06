@@ -8,6 +8,7 @@ const DestinationSection = ({ title, subtitle, image, align = 'left' }) => {
   const scale = useTransform(scrollYProgress, [0, 1], [0.9, 1]);
   const opacity = useTransform(scrollYProgress, [0, 1], [0, 1]);
   const y = useTransform(scrollYProgress, [0, 1], [40, 0]);
+  const imgY = useTransform(scrollYProgress, [0, 1], ['-8%', '8%']);
 
   return (
     <section ref={ref} className="relative flex min-h-[90vh] items-center justify-center bg-[#2C2C2C] py-16">
@@ -22,7 +23,8 @@ const DestinationSection = ({ title, subtitle, image, align = 'left' }) => {
           style={{ scale, opacity }}
           className="relative aspect-[4/3] w-full overflow-hidden rounded-xl ring-1 ring-white/10"
         >
-          <img
+          <motion.img
+            style={{ y: imgY }}
             src={image}
             alt={title}
             className="h-full w-full object-cover"
